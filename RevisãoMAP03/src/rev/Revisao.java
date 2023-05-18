@@ -32,17 +32,15 @@ public class Revisao extends Carro {
     /* CADASTRAR CÓDIGO E DESCRIÇÃO DA REVISÃO (via interface)*/
     public void cadastra(){
          super.cadastra();
-         Scanner sc = new Scanner(System.in);
-         System.out.print("Código da Revisão: ");
-         setCodRev(sc.nextInt());
+         Scanner sca = new Scanner(System.in);
          System.out.print("Descrição da Revisão: ");
-         sc.nextLine();
-         setDescRev(sc.nextLine());
-         sc.close();
+         setDescRev(sca.nextLine());
+         System.out.print("Código da Revisão: ");
+         setCodRev(sca.nextInt());
+         sca.close();
     }
      
     /* EXIBIÇÃO DO CÓDIGO E DESCRIÇÃO DA REVISÃO (via interface)*/
-
     public void mostra(){
         super.mostra();
         System.out.println("CÓDIGO DA REVISÃO: "+codRev

@@ -31,22 +31,21 @@ public class Carro {
     }
 
     public void cadastra(){
-         Scanner sc = new Scanner(System.in);
-         System.out.print("Marca do carro: ");
-         setMarca (sc.nextLine());
-         System.out.print("Modelo do carro: ");
-         setModelo (sc.nextLine());
-         System.out.print("Ano do carro: ");
-         setAno (sc.nextInt());
-         System.out.print("Numero da placa: ");
-         sc.nextLine();
-         setPlaca (sc.nextLine());
-         sc.close();
+        Scanner sc = new Scanner(System.in);
+        System.out.println(" ------- REVISÃO DO CARRO  -------- ");
+        System.out.print("Marca do carro: ");
+        setMarca (sc.nextLine());
+        System.out.print("Modelo do carro: ");
+        setModelo (sc.nextLine());
+        System.out.print("Ano do carro: ");
+        setAno(sc.nextInt());
+        System.out.print("Numero da placa: ");
+        setPlaca(sc.next());
 
     }
 
     public void mostra (){
-     System.out.println("\n-------------------------");
+     System.out.println("\n-------- DADOS DO AUTOMOVEL -----------");
      System.out.println("MARCA: "+marca
         +"\nMODELO: " +modelo
         +"\nANO: "+ano
