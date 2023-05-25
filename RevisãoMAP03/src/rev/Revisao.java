@@ -11,27 +11,25 @@ import java.util.Scanner;
  * @author: Maria Eduarda, Sammuel Rodrigues, Larissa Santos, Ereikson Mendes, Nayra
  */
 // REVISÃO EXTENDIDA PELA CLASSE CLIENTE
-public class Revisao extends Carro {
+public abstract class Revisao {
 
     /* Declaração e atribuição de variaveis de instancia da classe*/
     private int codRev; // Uma variável inteira para armazenar o código de revisão
     private String descRev;// Uma variável de string para armazenar a descrição da revisão
 
     /*CONSTRUTOR COM PARAMETROS DA SUPERCLASSE*/
-    public Revisao(int codRev, String descRev, String marca, String modelo, int ano, String placa) {
-        super(marca, modelo, ano, placa);
+    public Revisao(int codRev, String descRev) {
         this.codRev = codRev;
         this.descRev = descRev;
     }
 
-   //CONTRUTOR VAZIO//
+    //CONTRUTOR VAZIO
     public Revisao() {
 
     }
 
     /* CADASTRAR CÓDIGO E DESCRIÇÃO DA REVISÃO (via interface)*/
     public void cadastra(){
-         super.cadastra();
          Scanner sca = new Scanner(System.in);
          System.out.print("Descrição da Revisão: ");
          setDescRev(sca.nextLine());
@@ -42,7 +40,6 @@ public class Revisao extends Carro {
      
     /* EXIBIÇÃO DO CÓDIGO E DESCRIÇÃO DA REVISÃO (via interface)*/
     public void mostra(){
-        super.mostra();
         System.out.println("CÓDIGO DA REVISÃO: "+codRev
         +"\nDESCRIÇÃO: "+descRev);
     }
@@ -67,6 +64,10 @@ public class Revisao extends Carro {
         this.descRev = descRev;
     }
 
-    
-
+    @Override
+    public String toString() {
+        return "Revisao " +
+                "[ Codigo Revisao: " + codRev +
+                ", Descricao Revisao: " + descRev;
+    }
 }
